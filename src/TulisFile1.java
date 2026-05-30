@@ -9,7 +9,7 @@ public class TulisFile1 {
         var text = keyboard.nextLine();
         /*Ketika parameter pada append diset true - maka akan ditulis diakhir dari file
         Ketika parameter pada append diset false - maka akan ditulis diawal file dan akan menimpa file yang ada di txt */
-        try(var writer = new FileWriter("test.txt", false)){
+        try(var writer = new FileWriter("test.txt", true)){
             writer.write(text);
         }catch(IOException e){
             System.err.println("Gagal Menulis ke file");
